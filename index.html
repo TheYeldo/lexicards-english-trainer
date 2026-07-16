@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LexiCards English Trainer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">English drill</p>
+          <h1>LexiCards</h1>
+        </div>
+        <div class="stats-strip" aria-label="Прогресс тренировки">
+          <div class="stat">
+            <span id="answeredStat">0</span>
+            <small>ответов</small>
+          </div>
+          <div class="stat">
+            <span id="knownStat">0</span>
+            <small>знаю</small>
+          </div>
+          <div class="stat warn">
+            <span id="reviewStat">0</span>
+            <small>на повтор</small>
+          </div>
+          <div class="stat accent">
+            <span id="streakStat">0</span>
+            <small>серия</small>
+          </div>
+        </div>
+      </header>
+
+      <section class="trainer-grid">
+        <aside class="visual-panel" aria-label="Учебные карточки">
+          <img src="./assets/study-cards.png" alt="Иллюстрация с английскими карточками на учебном столе" />
+          <div class="visual-caption">
+            <span id="remainingStat">0</span>
+            <small>осталось в очереди</small>
+          </div>
+        </aside>
+
+        <section class="trainer-panel" aria-labelledby="currentWord">
+          <div class="toolbar" aria-label="Настройки тренировки">
+            <label>
+              <span>Тема</span>
+              <select id="categoryFilter"></select>
+            </label>
+            <label>
+              <span>Уровень</span>
+              <select id="levelFilter"></select>
+            </label>
+            <label>
+              <span>Режим</span>
+              <select id="modeFilter"></select>
+            </label>
+            <button class="icon-button" id="restartButton" type="button" aria-label="Перезапустить">
+              ↻
+            </button>
+          </div>
+
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressFill"></div>
+          </div>
+
+          <article class="flashcard" id="flashcard" tabindex="0" aria-live="polite">
+            <div class="card-inner">
+              <section class="card-face card-front">
+                <div class="card-meta">
+                  <span id="cardCategory">daily</span>
+                  <span id="cardLevel">A1</span>
+                </div>
+                <h2 id="currentWord">make sense</h2>
+                <p id="cardExample">Your plan makes sense.</p>
+              </section>
+              <section class="card-face card-back">
+                <div class="card-meta">
+                  <span>перевод</span>
+                  <span id="answerCount">1 вариант</span>
+                </div>
+                <h2 id="cardTranslation">иметь смысл</h2>
+                <p id="cardExampleTranslation">Твой план имеет смысл.</p>
+              </section>
+            </div>
+          </article>
+
+          <form class="answer-line" id="answerForm">
+            <label class="visually-hidden" for="answerInput">Введите перевод</label>
+            <input id="answerInput" name="answer" type="text" autocomplete="off" placeholder="введи перевод" />
+            <button type="submit">Проверить</button>
+          </form>
+
+          <p class="result-line" id="resultLine" aria-live="polite"></p>
+
+          <div class="action-row">
+            <button class="secondary danger" id="againButton" type="button">Еще раз</button>
+            <button class="secondary" id="flipButton" type="button">Открыть</button>
+            <button class="primary" id="knownButton" type="button">Знаю</button>
+            <button class="icon-button" id="speakButton" type="button" aria-label="Произнести слово">
+              ◉
+            </button>
+          </div>
+
+          <div class="quiz-row" id="quizRow" aria-label="Быстрый выбор перевода"></div>
+        </section>
+      </section>
+
+      <section class="lower-grid">
+        <section class="queue-panel" aria-labelledby="queueTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Queue</p>
+            <h2 id="queueTitle">Очередь</h2>
+          </div>
+          <div class="queue-list" id="queueList"></div>
+        </section>
+
+        <section class="builder-panel" aria-labelledby="builderTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Custom</p>
+            <h2 id="builderTitle">Своя карточка</h2>
+          </div>
+          <form class="builder-form" id="customCardForm">
+            <label>
+              <span>English</span>
+              <input name="word" type="text" autocomplete="off" required />
+            </label>
+            <label>
+              <span>Перевод</span>
+              <input name="translation" type="text" autocomplete="off" required />
+            </label>
+            <label>
+              <span>Пример</span>
+              <input name="example" type="text" autocomplete="off" />
+            </label>
+            <label>
+              <span>Тема</span>
+              <input name="category" type="text" value="custom" autocomplete="off" />
+            </label>
+            <label>
+              <span>Уровень</span>
+              <select name="level">
+                <option>A1</option>
+                <option>A2</option>
+                <option>B1</option>
+                <option>B2</option>
+              </select>
+            </label>
+            <button type="submit">Добавить</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>

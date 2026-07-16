@@ -1,0 +1,1206 @@
+export const defaultCards = [
+  {
+    id: "make-sense",
+    word: "make sense",
+    translation: "иметь смысл",
+    answers: ["быть понятным", "логично"],
+    example: "Your plan makes sense.",
+    exampleTranslation: "Твой план имеет смысл.",
+    category: "phrases",
+    level: "A2",
+  },
+  {
+    id: "figure-out",
+    word: "figure out",
+    translation: "разобраться",
+    answers: ["понять", "выяснить"],
+    example: "I need to figure out this rule.",
+    exampleTranslation: "Мне нужно разобраться с этим правилом.",
+    category: "phrases",
+    level: "B1",
+  },
+  {
+    id: "arrive",
+    word: "arrive",
+    translation: "прибывать",
+    answers: ["приезжать", "прилетать"],
+    example: "We arrive at seven.",
+    exampleTranslation: "Мы прибываем в семь.",
+    category: "travel",
+    level: "A1",
+  },
+  {
+    id: "gate",
+    word: "gate",
+    translation: "выход на посадку",
+    answers: ["гейт"],
+    example: "The gate opens soon.",
+    exampleTranslation: "Выход на посадку скоро откроется.",
+    category: "travel",
+    level: "A2",
+  },
+  {
+    id: "boarding-pass",
+    word: "boarding pass",
+    translation: "посадочный талон",
+    answers: ["посадочный"],
+    example: "Show your boarding pass.",
+    exampleTranslation: "Покажите посадочный талон.",
+    category: "travel",
+    level: "A2",
+  },
+  {
+    id: "tiny",
+    word: "tiny",
+    translation: "крошечный",
+    answers: ["маленький"],
+    example: "This is a tiny detail.",
+    exampleTranslation: "Это крошечная деталь.",
+    category: "daily",
+    level: "A1",
+  },
+  {
+    id: "messy",
+    word: "messy",
+    translation: "беспорядочный",
+    answers: ["грязный", "неаккуратный"],
+    example: "My desk is messy today.",
+    exampleTranslation: "Мой стол сегодня в беспорядке.",
+    category: "daily",
+    level: "A2",
+  },
+  {
+    id: "handle",
+    word: "handle",
+    translation: "справляться",
+    answers: ["разобраться с", "обрабатывать"],
+    example: "I can handle this task.",
+    exampleTranslation: "Я могу справиться с этой задачей.",
+    category: "work",
+    level: "B1",
+  },
+  {
+    id: "deadline",
+    word: "deadline",
+    translation: "срок сдачи",
+    answers: ["дедлайн", "крайний срок"],
+    example: "The deadline is Friday.",
+    exampleTranslation: "Срок сдачи в пятницу.",
+    category: "work",
+    level: "A2",
+  },
+  {
+    id: "confident",
+    word: "confident",
+    translation: "уверенный",
+    answers: ["уверенно"],
+    example: "She sounds confident.",
+    exampleTranslation: "Она звучит уверенно.",
+    category: "emotions",
+    level: "A2",
+  },
+  {
+    id: "overwhelmed",
+    word: "overwhelmed",
+    translation: "перегруженный",
+    answers: ["подавленный"],
+    example: "I feel overwhelmed by work.",
+    exampleTranslation: "Я чувствую себя перегруженным работой.",
+    category: "emotions",
+    level: "B1",
+  },
+  {
+    id: "keep-up",
+    word: "keep up",
+    translation: "не отставать",
+    answers: ["успевать", "продолжать"],
+    example: "Keep up the good work.",
+    exampleTranslation: "Продолжай в том же духе.",
+    category: "phrases",
+    level: "A2",
+  },
+  {
+    id: "eager",
+    word: "eager",
+    translation: "стремящийся",
+    answers: ["горящий желанием", "очень хотеть"],
+    example: "He is eager to learn.",
+    exampleTranslation: "Он очень хочет учиться.",
+    category: "daily",
+    level: "B1",
+  },
+  {
+    id: "borrow",
+    word: "borrow",
+    translation: "занимать",
+    answers: ["брать взаймы"],
+    example: "Can I borrow your pen?",
+    exampleTranslation: "Можно я займу твою ручку?",
+    category: "daily",
+    level: "A2",
+  },
+  {
+    id: "tidy",
+    word: "tidy",
+    translation: "аккуратный",
+    answers: ["прибранный"],
+    example: "Keep your room tidy.",
+    exampleTranslation: "Держи комнату в порядке.",
+    category: "daily",
+    level: "A2",
+  },
+  {
+    id: "crowded",
+    word: "crowded",
+    translation: "многолюдный",
+    answers: ["переполненный"],
+    example: "The cafe is crowded.",
+    exampleTranslation: "Кафе переполнено.",
+    category: "daily",
+    level: "A2",
+  },
+  {
+    id: "cozy",
+    word: "cozy",
+    translation: "уютный",
+    answers: ["комфортный"],
+    example: "This place feels cozy.",
+    exampleTranslation: "Это место кажется уютным.",
+    category: "daily",
+    level: "A2",
+  },
+  {
+    id: "notice",
+    word: "notice",
+    translation: "замечать",
+    answers: ["уведомление"],
+    example: "Did you notice the change?",
+    exampleTranslation: "Ты заметил изменение?",
+    category: "daily",
+    level: "B1",
+  },
+  {
+    id: "fix",
+    word: "fix",
+    translation: "чинить",
+    answers: ["исправлять"],
+    example: "I can fix the chair.",
+    exampleTranslation: "Я могу починить стул.",
+    category: "daily",
+    level: "A1",
+  },
+  {
+    id: "choose",
+    word: "choose",
+    translation: "выбирать",
+    answers: ["выбрать"],
+    example: "Choose one answer.",
+    exampleTranslation: "Выбери один ответ.",
+    category: "daily",
+    level: "A1",
+  },
+  {
+    id: "luggage",
+    word: "luggage",
+    translation: "багаж",
+    answers: ["чемоданы"],
+    example: "My luggage is heavy.",
+    exampleTranslation: "Мой багаж тяжелый.",
+    category: "travel",
+    level: "A2",
+  },
+  {
+    id: "delay",
+    word: "delay",
+    translation: "задержка",
+    answers: ["задерживать"],
+    example: "The flight has a delay.",
+    exampleTranslation: "У рейса задержка.",
+    category: "travel",
+    level: "A2",
+  },
+  {
+    id: "book-a-room",
+    word: "book a room",
+    translation: "забронировать номер",
+    answers: ["снять номер"],
+    example: "We need to book a room.",
+    exampleTranslation: "Нам нужно забронировать номер.",
+    category: "travel",
+    level: "A2",
+  },
+  {
+    id: "check-in",
+    word: "check in",
+    translation: "зарегистрироваться",
+    answers: ["заселиться"],
+    example: "We can check in at two.",
+    exampleTranslation: "Мы можем заселиться в два.",
+    category: "travel",
+    level: "A2",
+  },
+  {
+    id: "landmark",
+    word: "landmark",
+    translation: "достопримечательность",
+    answers: ["ориентир"],
+    example: "This tower is a famous landmark.",
+    exampleTranslation: "Эта башня известная достопримечательность.",
+    category: "travel",
+    level: "B1",
+  },
+  {
+    id: "direction",
+    word: "direction",
+    translation: "направление",
+    answers: ["указание"],
+    example: "Ask for directions.",
+    exampleTranslation: "Спроси дорогу.",
+    category: "travel",
+    level: "A2",
+  },
+  {
+    id: "customs",
+    word: "customs",
+    translation: "таможня",
+    answers: ["таможенный контроль"],
+    example: "We passed customs quickly.",
+    exampleTranslation: "Мы быстро прошли таможню.",
+    category: "travel",
+    level: "B1",
+  },
+  {
+    id: "itinerary",
+    word: "itinerary",
+    translation: "маршрут",
+    answers: ["план поездки"],
+    example: "Send me the itinerary.",
+    exampleTranslation: "Отправь мне маршрут поездки.",
+    category: "travel",
+    level: "B2",
+  },
+  {
+    id: "schedule",
+    word: "schedule",
+    translation: "расписание",
+    answers: ["график"],
+    example: "Check the schedule.",
+    exampleTranslation: "Проверь расписание.",
+    category: "work",
+    level: "A2",
+  },
+  {
+    id: "meeting",
+    word: "meeting",
+    translation: "встреча",
+    answers: ["совещание"],
+    example: "The meeting starts now.",
+    exampleTranslation: "Встреча начинается сейчас.",
+    category: "work",
+    level: "A1",
+  },
+  {
+    id: "update",
+    word: "update",
+    translation: "обновление",
+    answers: ["обновлять"],
+    example: "Give me a quick update.",
+    exampleTranslation: "Дай мне короткое обновление.",
+    category: "work",
+    level: "A2",
+  },
+  {
+    id: "attach",
+    word: "attach",
+    translation: "прикреплять",
+    answers: ["приложить"],
+    example: "Attach the file.",
+    exampleTranslation: "Прикрепи файл.",
+    category: "work",
+    level: "B1",
+  },
+  {
+    id: "approve",
+    word: "approve",
+    translation: "одобрять",
+    answers: ["утверждать"],
+    example: "Can you approve this request?",
+    exampleTranslation: "Можешь одобрить этот запрос?",
+    category: "work",
+    level: "B1",
+  },
+  {
+    id: "brief",
+    word: "brief",
+    translation: "краткий",
+    answers: ["бриф", "короткий"],
+    example: "Keep the message brief.",
+    exampleTranslation: "Сделай сообщение кратким.",
+    category: "work",
+    level: "B1",
+  },
+  {
+    id: "feedback",
+    word: "feedback",
+    translation: "обратная связь",
+    answers: ["отзыв"],
+    example: "Thanks for your feedback.",
+    exampleTranslation: "Спасибо за обратную связь.",
+    category: "work",
+    level: "A2",
+  },
+  {
+    id: "reliable",
+    word: "reliable",
+    translation: "надежный",
+    answers: ["достоверный"],
+    example: "She is a reliable teammate.",
+    exampleTranslation: "Она надежный товарищ по команде.",
+    category: "work",
+    level: "B1",
+  },
+  {
+    id: "run-into",
+    word: "run into",
+    translation: "случайно встретить",
+    answers: ["столкнуться"],
+    example: "I ran into my old friend.",
+    exampleTranslation: "Я случайно встретил старого друга.",
+    category: "phrases",
+    level: "B1",
+  },
+  {
+    id: "get-along",
+    word: "get along",
+    translation: "ладить",
+    answers: ["хорошо общаться"],
+    example: "They get along well.",
+    exampleTranslation: "Они хорошо ладят.",
+    category: "phrases",
+    level: "B1",
+  },
+  {
+    id: "pick-up",
+    word: "pick up",
+    translation: "забрать",
+    answers: ["подобрать", "выучить"],
+    example: "Can you pick me up?",
+    exampleTranslation: "Можешь меня забрать?",
+    category: "phrases",
+    level: "A2",
+  },
+  {
+    id: "give-up",
+    word: "give up",
+    translation: "сдаваться",
+    answers: ["бросить"],
+    example: "Do not give up.",
+    exampleTranslation: "Не сдавайся.",
+    category: "phrases",
+    level: "A2",
+  },
+  {
+    id: "look-forward-to",
+    word: "look forward to",
+    translation: "с нетерпением ждать",
+    answers: ["ждать"],
+    example: "I look forward to your reply.",
+    exampleTranslation: "Жду твоего ответа с нетерпением.",
+    category: "phrases",
+    level: "B1",
+  },
+  {
+    id: "take-care-of",
+    word: "take care of",
+    translation: "позаботиться о",
+    answers: ["заняться"],
+    example: "I will take care of it.",
+    exampleTranslation: "Я этим займусь.",
+    category: "phrases",
+    level: "A2",
+  },
+  {
+    id: "no-worries",
+    word: "no worries",
+    translation: "без проблем",
+    answers: ["не переживай"],
+    example: "No worries, I can help.",
+    exampleTranslation: "Без проблем, я могу помочь.",
+    category: "phrases",
+    level: "A2",
+  },
+  {
+    id: "by-the-way",
+    word: "by the way",
+    translation: "кстати",
+    answers: ["между прочим"],
+    example: "By the way, I called him.",
+    exampleTranslation: "Кстати, я ему позвонил.",
+    category: "phrases",
+    level: "A2",
+  },
+  {
+    id: "nervous",
+    word: "nervous",
+    translation: "нервный",
+    answers: ["волнующийся"],
+    example: "I feel nervous before exams.",
+    exampleTranslation: "Я нервничаю перед экзаменами.",
+    category: "emotions",
+    level: "A2",
+  },
+  {
+    id: "relieved",
+    word: "relieved",
+    translation: "облегченный",
+    answers: ["испытывающий облегчение"],
+    example: "She felt relieved.",
+    exampleTranslation: "Она почувствовала облегчение.",
+    category: "emotions",
+    level: "B1",
+  },
+  {
+    id: "annoyed",
+    word: "annoyed",
+    translation: "раздраженный",
+    answers: ["раздосадованный"],
+    example: "He sounded annoyed.",
+    exampleTranslation: "Он звучал раздраженно.",
+    category: "emotions",
+    level: "B1",
+  },
+  {
+    id: "proud",
+    word: "proud",
+    translation: "гордый",
+    answers: ["гордящийся"],
+    example: "I am proud of you.",
+    exampleTranslation: "Я горжусь тобой.",
+    category: "emotions",
+    level: "A2",
+  },
+  {
+    id: "curious",
+    word: "curious",
+    translation: "любопытный",
+    answers: ["заинтересованный"],
+    example: "I am curious about it.",
+    exampleTranslation: "Мне это любопытно.",
+    category: "emotions",
+    level: "B1",
+  },
+  {
+    id: "calm",
+    word: "calm",
+    translation: "спокойный",
+    answers: ["успокоиться"],
+    example: "Stay calm.",
+    exampleTranslation: "Оставайся спокойным.",
+    category: "emotions",
+    level: "A1",
+  },
+  {
+    id: "embarrassed",
+    word: "embarrassed",
+    translation: "смущенный",
+    answers: ["неловко"],
+    example: "I felt embarrassed.",
+    exampleTranslation: "Мне было неловко.",
+    category: "emotions",
+    level: "B1",
+  },
+  {
+    id: "excited",
+    word: "excited",
+    translation: "взволнованный",
+    answers: ["воодушевленный"],
+    example: "They are excited about the trip.",
+    exampleTranslation: "Они воодушевлены поездкой.",
+    category: "emotions",
+    level: "A2",
+  },
+  {
+    id: "upload",
+    word: "upload",
+    translation: "загрузить",
+    answers: ["выгрузить"],
+    example: "Upload the photo.",
+    exampleTranslation: "Загрузи фото.",
+    category: "internet",
+    level: "A2",
+  },
+  {
+    id: "download",
+    word: "download",
+    translation: "скачать",
+    answers: ["загрузить на устройство"],
+    example: "Download the app.",
+    exampleTranslation: "Скачай приложение.",
+    category: "internet",
+    level: "A2",
+  },
+  {
+    id: "account",
+    word: "account",
+    translation: "аккаунт",
+    answers: ["учетная запись", "счет"],
+    example: "Create an account.",
+    exampleTranslation: "Создай аккаунт.",
+    category: "internet",
+    level: "A2",
+  },
+  {
+    id: "password",
+    word: "password",
+    translation: "пароль",
+    answers: ["код доступа"],
+    example: "Change your password.",
+    exampleTranslation: "Смени пароль.",
+    category: "internet",
+    level: "A1",
+  },
+  {
+    id: "settings",
+    word: "settings",
+    translation: "настройки",
+    answers: ["параметры"],
+    example: "Open the settings.",
+    exampleTranslation: "Открой настройки.",
+    category: "internet",
+    level: "A2",
+  },
+  {
+    id: "link",
+    word: "link",
+    translation: "ссылка",
+    answers: ["соединять"],
+    example: "Send me the link.",
+    exampleTranslation: "Отправь мне ссылку.",
+    category: "internet",
+    level: "A1",
+  },
+  {
+    id: "subscribe",
+    word: "subscribe",
+    translation: "подписаться",
+    answers: ["оформить подписку"],
+    example: "Subscribe to the channel.",
+    exampleTranslation: "Подпишись на канал.",
+    category: "internet",
+    level: "B1",
+  },
+  {
+    id: "scroll",
+    word: "scroll",
+    translation: "прокручивать",
+    answers: ["листать"],
+    example: "Scroll down the page.",
+    exampleTranslation: "Прокрути страницу вниз.",
+    category: "internet",
+    level: "A2",
+  },
+  {
+    id: "headache",
+    word: "headache",
+    translation: "головная боль",
+    answers: ["болит голова"],
+    example: "I have a headache.",
+    exampleTranslation: "У меня болит голова.",
+    category: "health",
+    level: "A1",
+  },
+  {
+    id: "sore-throat",
+    word: "sore throat",
+    translation: "боль в горле",
+    answers: ["болит горло"],
+    example: "She has a sore throat.",
+    exampleTranslation: "У нее болит горло.",
+    category: "health",
+    level: "A2",
+  },
+  {
+    id: "appointment",
+    word: "appointment",
+    translation: "запись на прием",
+    answers: ["встреча"],
+    example: "I have a doctor's appointment.",
+    exampleTranslation: "У меня запись к врачу.",
+    category: "health",
+    level: "B1",
+  },
+  {
+    id: "pharmacy",
+    word: "pharmacy",
+    translation: "аптека",
+    answers: ["фармация"],
+    example: "Where is the pharmacy?",
+    exampleTranslation: "Где аптека?",
+    category: "health",
+    level: "A2",
+  },
+  {
+    id: "recover",
+    word: "recover",
+    translation: "выздоравливать",
+    answers: ["восстанавливаться"],
+    example: "He needs time to recover.",
+    exampleTranslation: "Ему нужно время, чтобы восстановиться.",
+    category: "health",
+    level: "B1",
+  },
+  {
+    id: "rest",
+    word: "rest",
+    translation: "отдыхать",
+    answers: ["отдых"],
+    example: "You should rest today.",
+    exampleTranslation: "Тебе стоит отдохнуть сегодня.",
+    category: "health",
+    level: "A1",
+  },
+  {
+    id: "symptoms",
+    word: "symptoms",
+    translation: "симптомы",
+    answers: ["признаки болезни"],
+    example: "Describe your symptoms.",
+    exampleTranslation: "Опиши свои симптомы.",
+    category: "health",
+    level: "B1",
+  },
+  {
+    id: "healthy",
+    word: "healthy",
+    translation: "здоровый",
+    answers: ["полезный"],
+    example: "This meal is healthy.",
+    exampleTranslation: "Эта еда полезная.",
+    category: "health",
+    level: "A2",
+  },
+  {
+    id: "budget",
+    word: "budget",
+    translation: "бюджет",
+    answers: ["план расходов"],
+    example: "We need a budget.",
+    exampleTranslation: "Нам нужен бюджет.",
+    category: "money",
+    level: "A2",
+  },
+  {
+    id: "receipt",
+    word: "receipt",
+    translation: "чек",
+    answers: ["квитанция"],
+    example: "Keep the receipt.",
+    exampleTranslation: "Сохрани чек.",
+    category: "money",
+    level: "A2",
+  },
+  {
+    id: "refund",
+    word: "refund",
+    translation: "возврат денег",
+    answers: ["вернуть деньги"],
+    example: "I asked for a refund.",
+    exampleTranslation: "Я попросил возврат денег.",
+    category: "money",
+    level: "B1",
+  },
+  {
+    id: "discount",
+    word: "discount",
+    translation: "скидка",
+    answers: ["уценка"],
+    example: "There is a big discount.",
+    exampleTranslation: "Там большая скидка.",
+    category: "money",
+    level: "A2",
+  },
+  {
+    id: "afford",
+    word: "afford",
+    translation: "позволить себе",
+    answers: ["иметь возможность купить"],
+    example: "I cannot afford it.",
+    exampleTranslation: "Я не могу себе это позволить.",
+    category: "money",
+    level: "B1",
+  },
+  {
+    id: "cash",
+    word: "cash",
+    translation: "наличные",
+    answers: ["деньги"],
+    example: "Do you have cash?",
+    exampleTranslation: "У тебя есть наличные?",
+    category: "money",
+    level: "A1",
+  },
+  {
+    id: "bill",
+    word: "bill",
+    translation: "счет",
+    answers: ["купюра"],
+    example: "Can we get the bill?",
+    exampleTranslation: "Можно нам счет?",
+    category: "money",
+    level: "A1",
+  },
+  {
+    id: "save-up",
+    word: "save up",
+    translation: "накопить",
+    answers: ["копить"],
+    example: "I am saving up for a laptop.",
+    exampleTranslation: "Я коплю на ноутбук.",
+    category: "money",
+    level: "B1",
+  },
+  {
+    id: "assignment",
+    word: "assignment",
+    translation: "задание",
+    answers: ["домашняя работа"],
+    example: "Finish the assignment.",
+    exampleTranslation: "Закончи задание.",
+    category: "study",
+    level: "B1",
+  },
+  {
+    id: "explain",
+    word: "explain",
+    translation: "объяснять",
+    answers: ["пояснять"],
+    example: "Can you explain this?",
+    exampleTranslation: "Можешь это объяснить?",
+    category: "study",
+    level: "A2",
+  },
+  {
+    id: "improve",
+    word: "improve",
+    translation: "улучшать",
+    answers: ["становиться лучше"],
+    example: "Practice helps you improve.",
+    exampleTranslation: "Практика помогает улучшаться.",
+    category: "study",
+    level: "A2",
+  },
+  {
+    id: "practice",
+    word: "practice",
+    translation: "практиковаться",
+    answers: ["практика"],
+    example: "Practice every day.",
+    exampleTranslation: "Практикуйся каждый день.",
+    category: "study",
+    level: "A1",
+  },
+  {
+    id: "mistake",
+    word: "mistake",
+    translation: "ошибка",
+    answers: ["ошибаться"],
+    example: "This mistake is useful.",
+    exampleTranslation: "Эта ошибка полезна.",
+    category: "study",
+    level: "A1",
+  },
+  {
+    id: "fluently",
+    word: "fluently",
+    translation: "бегло",
+    answers: ["свободно"],
+    example: "She speaks fluently.",
+    exampleTranslation: "Она говорит бегло.",
+    category: "study",
+    level: "B1",
+  },
+  {
+    id: "pronounce",
+    word: "pronounce",
+    translation: "произносить",
+    answers: ["выговаривать"],
+    example: "How do you pronounce it?",
+    exampleTranslation: "Как это произносится?",
+    category: "study",
+    level: "B1",
+  },
+  {
+    id: "review",
+    word: "review",
+    translation: "повторять",
+    answers: ["обзор", "проверять"],
+    example: "Review the words tomorrow.",
+    exampleTranslation: "Повтори слова завтра.",
+    category: "study",
+    level: "A2",
+  },
+  {
+    id: "although",
+    word: "although",
+    translation: "хотя",
+    answers: ["несмотря на то что"],
+    example: "Although it was late, we continued.",
+    exampleTranslation: "Хотя было поздно, мы продолжили.",
+    category: "grammar",
+    level: "B1",
+  },
+  {
+    id: "unless",
+    word: "unless",
+    translation: "если не",
+    answers: ["пока не"],
+    example: "I will go unless it rains.",
+    exampleTranslation: "Я пойду, если не будет дождя.",
+    category: "grammar",
+    level: "B1",
+  },
+  {
+    id: "however",
+    word: "however",
+    translation: "однако",
+    answers: ["тем не менее"],
+    example: "It is hard. However, it is useful.",
+    exampleTranslation: "Это сложно. Однако это полезно.",
+    category: "grammar",
+    level: "B1",
+  },
+  {
+    id: "instead",
+    word: "instead",
+    translation: "вместо этого",
+    answers: ["взамен"],
+    example: "Let's walk instead.",
+    exampleTranslation: "Давай вместо этого пройдемся.",
+    category: "grammar",
+    level: "A2",
+  },
+  {
+    id: "probably",
+    word: "probably",
+    translation: "вероятно",
+    answers: ["скорее всего"],
+    example: "I will probably be late.",
+    exampleTranslation: "Я, вероятно, опоздаю.",
+    category: "grammar",
+    level: "A2",
+  },
+  {
+    id: "already",
+    word: "already",
+    translation: "уже",
+    answers: ["к настоящему моменту"],
+    example: "I already know this word.",
+    exampleTranslation: "Я уже знаю это слово.",
+    category: "grammar",
+    level: "A1",
+  },
+  {
+    id: "yet",
+    word: "yet",
+    translation: "еще",
+    answers: ["пока"],
+    example: "I do not know it yet.",
+    exampleTranslation: "Я пока этого не знаю.",
+    category: "grammar",
+    level: "A2",
+  },
+  {
+    id: "almost",
+    word: "almost",
+    translation: "почти",
+    answers: ["едва не"],
+    example: "We are almost ready.",
+    exampleTranslation: "Мы почти готовы.",
+    category: "grammar",
+    level: "A1",
+  },
+].concat(
+  makeCards([
+    ["hungry", "hungry", "голодный", "I am hungry after class.", "Я голоден после урока.", "food", "A1", "хотеть есть"],
+    ["thirsty", "thirsty", "испытывающий жажду", "Are you thirsty?", "Ты хочешь пить?", "food", "A1", "хотеть пить"],
+    ["spicy", "spicy", "острый", "This soup is spicy.", "Этот суп острый.", "food", "A2", "пряный"],
+    ["flavor", "flavor", "вкус", "I like this flavor.", "Мне нравится этот вкус.", "food", "B1", "аромат"],
+    ["slice", "slice", "ломтик", "Take one slice of bread.", "Возьми один ломтик хлеба.", "food", "A2", "кусок"],
+    ["boil", "boil", "кипятить", "Boil the water first.", "Сначала вскипяти воду.", "food", "A2", "варить"],
+    ["stir", "stir", "помешивать", "Stir the sauce slowly.", "Медленно помешивай соус.", "food", "B1", "размешивать"],
+    ["ripe", "ripe", "спелый", "The banana is ripe.", "Банан спелый.", "food", "A2", "созревший"],
+    ["leftovers", "leftovers", "остатки еды", "Put the leftovers in the fridge.", "Положи остатки еды в холодильник.", "food", "B1", "остатки"],
+    ["portion", "portion", "порция", "The portion is huge.", "Порция огромная.", "food", "B1", "часть"],
+    ["blanket", "blanket", "одеяло", "Bring an extra blanket.", "Принеси дополнительное одеяло.", "home", "A2", "плед"],
+    ["shelf", "shelf", "полка", "The book is on the shelf.", "Книга на полке.", "home", "A1", "стеллаж"],
+    ["drawer", "drawer", "ящик", "Open the top drawer.", "Открой верхний ящик.", "home", "A2", "выдвижной ящик"],
+    ["curtain", "curtain", "штора", "Close the curtain.", "Закрой штору.", "home", "A2", "занавеска"],
+    ["faucet", "faucet", "кран", "The faucet is leaking.", "Кран протекает.", "home", "B1", "смеситель"],
+    ["laundry", "laundry", "стирка", "I need to do laundry.", "Мне нужно постирать вещи.", "home", "A2", "белье"],
+    ["vacuum", "vacuum", "пылесосить", "Can you vacuum the floor?", "Можешь пропылесосить пол?", "home", "B1", "пылесос"],
+    ["plug", "plug", "вилка", "Where is the plug?", "Где вилка?", "home", "A2", "штекер"],
+    ["socket", "socket", "розетка", "Use this socket.", "Используй эту розетку.", "home", "B1", "гнездо"],
+    ["rent", "rent", "арендовать", "They rent a small flat.", "Они арендуют маленькую квартиру.", "home", "A2", "снимать жилье"],
+    ["receipt-email", "invoice", "счет-фактура", "The invoice arrived by email.", "Счет-фактура пришел по почте.", "money", "B1", "инвойс"],
+    ["fee", "fee", "плата", "There is a small fee.", "Там есть небольшая плата.", "money", "B1", "сбор"],
+    ["loan", "loan", "заем", "He took a bank loan.", "Он взял банковский заем.", "money", "B1", "кредит"],
+    ["income", "income", "доход", "My income changed this year.", "Мой доход изменился в этом году.", "money", "B1", "заработок"],
+    ["expense", "expense", "расход", "Track every expense.", "Отслеживай каждый расход.", "money", "B1", "трата"],
+    ["worth", "worth", "стоить", "It is worth the price.", "Это стоит своей цены.", "money", "B1", "ценность"],
+    ["cheap", "cheap", "дешевый", "This ticket is cheap.", "Этот билет дешевый.", "money", "A1", "недорогой"],
+    ["pricey", "pricey", "дороговатый", "The hotel is pricey.", "Отель дороговатый.", "money", "B1", "дорогой"],
+    ["payment", "payment", "платеж", "The payment failed.", "Платеж не прошел.", "money", "A2", "оплата"],
+    ["change-money", "change", "сдача", "Keep the change.", "Оставь сдачу.", "money", "A1", "изменение"],
+    ["headline", "headline", "заголовок", "Read the headline first.", "Сначала прочитай заголовок.", "media", "B1", "название"],
+    ["article", "article", "статья", "This article is useful.", "Эта статья полезная.", "media", "A2", "артикль"],
+    ["source", "source", "источник", "Check the source.", "Проверь источник.", "media", "B1", "первоисточник"],
+    ["broadcast", "broadcast", "трансляция", "The broadcast starts soon.", "Трансляция скоро начнется.", "media", "B2", "вещать"],
+    ["caption", "caption", "подпись", "Add a short caption.", "Добавь короткую подпись.", "media", "B1", "субтитр"],
+    ["episode", "episode", "серия", "I watched one episode.", "Я посмотрел одну серию.", "media", "A2", "эпизод"],
+    ["plot", "plot", "сюжет", "The plot is simple.", "Сюжет простой.", "media", "B1", "замысел"],
+    ["character", "character", "персонаж", "This character is funny.", "Этот персонаж смешной.", "media", "A2", "характер"],
+    ["recommend", "recommend", "рекомендовать", "Can you recommend a movie?", "Можешь порекомендовать фильм?", "media", "B1", "советовать"],
+    ["spoiler", "spoiler", "спойлер", "No spoilers, please.", "Без спойлеров, пожалуйста.", "media", "A2", "раскрытие сюжета"],
+    ["receipt-shop", "cart", "корзина", "Add it to the cart.", "Добавь это в корзину.", "shopping", "A2", "тележка"],
+    ["checkout", "checkout", "оформление заказа", "Go to checkout.", "Перейди к оформлению заказа.", "shopping", "B1", "касса"],
+    ["size", "size", "размер", "What size do you need?", "Какой размер тебе нужен?", "shopping", "A1", "величина"],
+    ["fit", "fit", "подходить по размеру", "This jacket fits well.", "Эта куртка хорошо сидит.", "shopping", "A2", "подходить"],
+    ["try-on", "try on", "примерить", "Can I try it on?", "Можно примерить?", "shopping", "A2", "надеть для примерки"],
+    ["out-of-stock", "out of stock", "нет в наличии", "This item is out of stock.", "Этого товара нет в наличии.", "shopping", "B1", "распродан"],
+    ["brand", "brand", "бренд", "I do not know this brand.", "Я не знаю этот бренд.", "shopping", "A2", "марка"],
+    ["quality", "quality", "качество", "The quality is good.", "Качество хорошее.", "shopping", "A2", "свойство"],
+    ["exchange", "exchange", "обменять", "Can I exchange this shirt?", "Можно обменять эту рубашку?", "shopping", "B1", "обмен"],
+    ["warranty", "warranty", "гарантия", "The warranty lasts one year.", "Гарантия длится один год.", "shopping", "B2", "гарантийный срок"],
+    ["weather", "weather", "погода", "The weather is nice.", "Погода хорошая.", "nature", "A1", "погодные условия"],
+    ["forecast", "forecast", "прогноз", "Check the weather forecast.", "Проверь прогноз погоды.", "nature", "B1", "предсказание"],
+    ["rainy", "rainy", "дождливый", "It is rainy today.", "Сегодня дождливо.", "nature", "A1", "дождевой"],
+    ["foggy", "foggy", "туманный", "The morning was foggy.", "Утро было туманным.", "nature", "A2", "с туманом"],
+    ["breeze", "breeze", "легкий ветер", "A cool breeze came in.", "Подул прохладный ветерок.", "nature", "B1", "ветерок"],
+    ["path", "path", "тропа", "Follow this path.", "Иди по этой тропе.", "nature", "A2", "путь"],
+    ["hill", "hill", "холм", "We climbed the hill.", "Мы поднялись на холм.", "nature", "A1", "пригорок"],
+    ["shore", "shore", "берег", "They walked along the shore.", "Они гуляли вдоль берега.", "nature", "B1", "побережье"],
+    ["wildlife", "wildlife", "дикая природа", "We saw local wildlife.", "Мы увидели местную дикую природу.", "nature", "B2", "животный мир"],
+    ["pollution", "pollution", "загрязнение", "Pollution is a serious problem.", "Загрязнение — серьезная проблема.", "nature", "B1", "загрязненность"],
+    ["neighbor", "neighbor", "сосед", "Our neighbor is friendly.", "Наш сосед дружелюбный.", "social", "A2", "соседка"],
+    ["stranger", "stranger", "незнакомец", "Do not talk to strangers.", "Не разговаривай с незнакомцами.", "social", "A2", "посторонний"],
+    ["invite", "invite", "приглашать", "Invite her to dinner.", "Пригласи ее на ужин.", "social", "A2", "позвать"],
+    ["apologize", "apologize", "извиняться", "You should apologize.", "Тебе стоит извиниться.", "social", "B1", "просить прощения"],
+    ["argue", "argue", "спорить", "They argue about money.", "Они спорят о деньгах.", "social", "B1", "ссориться"],
+    ["support", "support", "поддерживать", "I support your decision.", "Я поддерживаю твое решение.", "social", "A2", "поддержка"],
+    ["promise", "promise", "обещать", "I promise to call.", "Обещаю позвонить.", "social", "A2", "обещание"],
+    ["trust", "trust", "доверять", "I trust you.", "Я тебе доверяю.", "social", "A2", "доверие"],
+    ["respect", "respect", "уважать", "Respect other people.", "Уважай других людей.", "social", "A2", "уважение"],
+    ["share", "share", "делиться", "Share your idea.", "Поделись своей идеей.", "social", "A1", "разделять"],
+    ["turn-on", "turn on", "включить", "Turn on the light.", "Включи свет.", "phrasal", "A1", "запустить"],
+    ["turn-off", "turn off", "выключить", "Turn off the music.", "Выключи музыку.", "phrasal", "A1", "отключить"],
+    ["set-up", "set up", "настроить", "Set up your profile.", "Настрой свой профиль.", "phrasal", "B1", "организовать"],
+    ["break-down", "break down", "сломаться", "The car broke down.", "Машина сломалась.", "phrasal", "B1", "разбить на части"],
+    ["carry-on", "carry on", "продолжать", "Carry on with the task.", "Продолжай задачу.", "phrasal", "B1", "продолжить"],
+    ["come-across", "come across", "наткнуться", "I came across an old photo.", "Я наткнулся на старое фото.", "phrasal", "B2", "случайно найти"],
+    ["bring-up", "bring up", "упомянуть", "Do not bring it up now.", "Не упоминай это сейчас.", "phrasal", "B2", "поднять тему"],
+    ["look-after", "look after", "присматривать за", "Can you look after the dog?", "Можешь присмотреть за собакой?", "phrasal", "B1", "заботиться"],
+    ["fill-in", "fill in", "заполнить", "Fill in the form.", "Заполни форму.", "phrasal", "A2", "вписать"],
+    ["hang-out", "hang out", "тусоваться", "We hang out after work.", "Мы проводим время после работы.", "phrasal", "A2", "проводить время"],
+  ]),
+);
+
+export function createSession(cards = defaultCards, options = {}) {
+  const category = options.category ?? "all";
+  const level = options.level ?? "all";
+  const repeatMisses = normalizePositiveInteger(options.repeatMisses, 1);
+  const limit = options.limit == null ? null : normalizePositiveInteger(options.limit, cards.length);
+  let selectedCards = cards.filter((card) => {
+    const categoryMatches = category === "all" || card.category === category;
+    const levelMatches = level === "all" || card.level === level;
+    return categoryMatches && levelMatches;
+  });
+
+  if (options.shuffleSeed) {
+    selectedCards = seededShuffle(selectedCards, options.shuffleSeed);
+  }
+
+  if (limit) {
+    selectedCards = selectedCards.slice(0, limit);
+  }
+
+  return {
+    cards: selectedCards,
+    order: selectedCards.map((card) => card.id),
+    index: 0,
+    knownIds: [],
+    reviewIds: [],
+    answered: 0,
+    streak: 0,
+    category,
+    level,
+    limit,
+    mode: options.mode ?? "full",
+    repeatMisses,
+    shuffleSeed: options.shuffleSeed ?? null,
+  };
+}
+
+export function currentCard(session) {
+  const currentId = session.order[session.index];
+  if (!currentId) {
+    return null;
+  }
+
+  return session.cards.find((card) => card.id === currentId) ?? null;
+}
+
+export function rateCurrentCard(session, rating) {
+  const card = currentCard(session);
+  if (!card) {
+    return session;
+  }
+
+  const knownIds = new Set(session.knownIds);
+  const reviewIds = new Set(session.reviewIds);
+  const order = [...session.order];
+
+  if (rating === "known") {
+    knownIds.add(card.id);
+    reviewIds.delete(card.id);
+  } else if (rating === "again") {
+    knownIds.delete(card.id);
+    reviewIds.add(card.id);
+    for (let index = 0; index < session.repeatMisses; index += 1) {
+      order.push(card.id);
+    }
+  } else {
+    throw new Error(`Unknown rating: ${rating}`);
+  }
+
+  return {
+    ...session,
+    order,
+    knownIds: [...knownIds],
+    reviewIds: [...reviewIds],
+    answered: session.answered + 1,
+    streak: rating === "known" ? session.streak + 1 : 0,
+    index: session.index + 1,
+  };
+}
+
+export function progressSummary(session) {
+  return {
+    answered: session.answered,
+    total: session.cards.length,
+    known: session.knownIds.length,
+    needsReview: session.reviewIds.length,
+    streak: session.streak,
+    remaining: Math.max(session.order.length - session.index, 0),
+  };
+}
+
+export function checkTranslation(card, input) {
+  const normalizedInput = normalizeAnswer(input);
+  const variants = [card.translation, ...(card.answers ?? [])];
+  const matched = variants.find((answer) => normalizeAnswer(answer) === normalizedInput) ?? null;
+
+  return {
+    correct: Boolean(normalizedInput && matched),
+    expected: card.translation,
+    matched,
+  };
+}
+
+export function addCustomCard(cards, draft) {
+  const word = cleanText(draft.word);
+  const translation = cleanText(draft.translation);
+  const extraAnswers = Array.isArray(draft.answers)
+    ? draft.answers
+    : String(draft.answers ?? "")
+        .split(",")
+        .map(cleanText)
+        .filter(Boolean);
+
+  const card = {
+    id: uniqueCardId(cards, draft.id || `custom-${slugify(word)}`),
+    word,
+    translation,
+    answers: [...new Set([translation, ...extraAnswers])],
+    example: cleanText(draft.example),
+    category: cleanText(draft.category) || "custom",
+    level: cleanText(draft.level) || "A1",
+  };
+
+  return [...cards, card];
+}
+
+export function categoriesFor(cards) {
+  return ["all", ...new Set(cards.map((card) => card.category))];
+}
+
+export function levelsFor(cards) {
+  return ["all", ...new Set(cards.map((card) => card.level))];
+}
+
+function makeCards(rows) {
+  return rows.map(([id, word, translation, example, exampleTranslation, category, level, ...answers]) => ({
+    id,
+    word,
+    translation,
+    answers,
+    example,
+    exampleTranslation,
+    category,
+    level,
+  }));
+}
+
+function normalizeAnswer(value) {
+  return String(value ?? "")
+    .normalize("NFKC")
+    .toLocaleLowerCase("ru-RU")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function cleanText(value) {
+  return String(value ?? "").trim().replace(/\s+/g, " ");
+}
+
+function slugify(value) {
+  const slug = String(value ?? "")
+    .normalize("NFKD")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+  return slug || "card";
+}
+
+function uniqueCardId(cards, preferredId) {
+  const existingIds = new Set(cards.map((card) => card.id));
+  let id = preferredId;
+  let index = 2;
+
+  while (existingIds.has(id)) {
+    id = `${preferredId}-${index}`;
+    index += 1;
+  }
+
+  return id;
+}
+
+function normalizePositiveInteger(value, fallback) {
+  const parsed = Number.parseInt(value, 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function seededShuffle(cards, seed) {
+  return [...cards].sort((left, right) => {
+    return hashString(`${left.id}:${seed}`) - hashString(`${right.id}:${seed}`);
+  });
+}
+
+function hashString(value) {
+  return String(value)
+    .split("")
+    .reduce((hash, character) => {
+      return (hash * 31 + character.charCodeAt(0)) >>> 0;
+    }, 7);
+}

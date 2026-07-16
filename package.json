@@ -1,0 +1,17 @@
+{
+  "name": "lexicards-english-trainer",
+  "version": "1.0.0",
+  "description": "Interactive English flashcard trainer with Russian translations, practice modes, and custom local cards.",
+  "type": "module",
+  "scripts": {
+    "check": "node --check app.mjs && node --check deck.mjs",
+    "test": "node --test deck.test.mjs"
+  },
+  "keywords": [
+    "english",
+    "flashcards",
+    "learning",
+    "trainer"
+  ],
+  "license": "MIT"
+}
