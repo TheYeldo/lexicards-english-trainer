@@ -3,47 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LexiCards English Trainer</title>
+    <meta name="theme-color" content="#f4f1ea" />
+    <meta
+      name="description"
+      content="LexiCards — интерактивный тренажер английских слов с умным повторением, личным словарем и короткими уроками."
+    />
+    <title>LexiCards — English Trainer</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="app-shell">
+    <div class="app-shell">
       <header class="topbar">
-        <div>
-          <p class="eyebrow">English drill</p>
-          <h1>LexiCards</h1>
-        </div>
-        <div class="stats-strip" aria-label="Прогресс тренировки">
-          <div class="stat">
-            <span id="answeredStat">0</span>
-            <small>ответов</small>
+        <a class="brand" href="#practice" data-nav-view="practice" aria-label="LexiCards — тренировка">
+          <span class="brand-mark" aria-hidden="true">L</span>
+          <span>
+            <strong>LexiCards</strong>
+            <small>English practice</small>
+          </span>
+        </a>
+
+        <nav class="view-tabs" aria-label="Разделы приложения">
+          <button class="view-tab is-active" type="button" data-view="practice" aria-selected="true">
+            Тренировка
+          </button>
+          <button class="view-tab" type="button" data-view="library" aria-selected="false">
+            Словарь <span id="libraryCount">0</span>
+          </button>
+          <button class="view-tab" type="button" data-view="guide" aria-selected="false">Гид</button>
+        </nav>
+
+        <div class="top-actions">
+          <div class="today-compact" aria-label="Карточек изучено сегодня">
+            <span id="todayCompact">0</span>
+            <small>сегодня</small>
           </div>
-          <div class="stat">
-            <span id="knownStat">0</span>
-            <small>знаю</small>
-          </div>
-          <div class="stat warn">
-            <span id="reviewStat">0</span>
-            <small>на повтор</small>
-          </div>
-          <div class="stat accent">
-            <span id="streakStat">0</span>
-            <small>серия</small>
-          </div>
+          <button class="icon-button" id="themeButton" type="button" aria-label="Сменить тему" title="Сменить тему">
+            <span aria-hidden="true">☼</span>
+          </button>
         </div>
       </header>
 
-      <section class="trainer-grid">
-        <aside class="visual-panel" aria-label="Учебные карточки">
-          <img src="./assets/study-cards.png" alt="Иллюстрация с английскими карточками на учебном столе" />
-          <div class="visual-caption">
-            <span id="remainingStat">0</span>
-            <small>осталось в очереди</small>
+      <main>
+        <section class="app-view is-active" id="practiceView" data-view-panel="practice">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">Персональная сессия</p>
+              <h1 id="sessionTitle">Продолжаем английский</h1>
+            </div>
+            <p id="sessionLead">Новые слова вперемешку с теми, которые пора повторить.</p>
           </div>
-        </aside>
 
-        <section class="trainer-panel" aria-labelledby="currentWord">
-          <div class="toolbar" aria-label="Настройки тренировки">
+          <section class="stats-strip" aria-label="Общий прогресс">
+            <div class="stat-block">
+              <span id="answeredStat">0</span>
+              <small>в этой сессии</small>
+            </div>
+            <div class="stat-block success">
+              <span id="accuracyStat">0%</span>
+              <small>точность сегодня</small>
+            </div>
+            <div class="stat-block warm">
+              <span id="reviewStat">0</span>
+              <small>пора повторить</small>
+            </div>
+            <div class="stat-block blue">
+              <span id="masteredStat">0</span>
+              <small>освоено</small>
+            </div>
+          </section>
+
+          <section class="practice-toolbar" aria-label="Настройки тренировки">
+            <label>
+              <span>Сессия</span>
+              <select id="modeFilter"></select>
+            </label>
             <label>
               <span>Тема</span>
               <select id="categoryFilter"></select>
@@ -52,107 +85,266 @@
               <span>Уровень</span>
               <select id="levelFilter"></select>
             </label>
-            <label>
-              <span>Режим</span>
-              <select id="modeFilter"></select>
-            </label>
-            <button class="icon-button" id="restartButton" type="button" aria-label="Перезапустить">
-              ↻
+            <fieldset class="direction-control">
+              <legend>Направление</legend>
+              <div class="segmented">
+                <button class="is-active" type="button" data-direction="en-ru" aria-pressed="true">EN → RU</button>
+                <button type="button" data-direction="ru-en" aria-pressed="false">RU → EN</button>
+                <button type="button" data-direction="listen" aria-pressed="false">Аудио</button>
+              </div>
+            </fieldset>
+            <button class="icon-button restart-button" id="restartButton" type="button" aria-label="Начать сессию заново" title="Начать заново">
+              <span aria-hidden="true">↻</span>
             </button>
-          </div>
+          </section>
 
-          <div class="progress-track" aria-hidden="true">
-            <div id="progressFill"></div>
-          </div>
-
-          <article class="flashcard" id="flashcard" tabindex="0" aria-live="polite">
-            <div class="card-inner">
-              <section class="card-face card-front">
-                <div class="card-meta">
-                  <span id="cardCategory">daily</span>
-                  <span id="cardLevel">A1</span>
-                </div>
-                <h2 id="currentWord">make sense</h2>
-                <p id="cardExample">Your plan makes sense.</p>
-              </section>
-              <section class="card-face card-back">
-                <div class="card-meta">
-                  <span>перевод</span>
-                  <span id="answerCount">1 вариант</span>
-                </div>
-                <h2 id="cardTranslation">иметь смысл</h2>
-                <p id="cardExampleTranslation">Твой план имеет смысл.</p>
-              </section>
+          <div class="session-progress">
+            <div class="progress-copy">
+              <span id="sessionProgressLabel">0 из 0</span>
+              <span id="remainingStat">0 в очереди</span>
             </div>
-          </article>
-
-          <form class="answer-line" id="answerForm">
-            <label class="visually-hidden" for="answerInput">Введите перевод</label>
-            <input id="answerInput" name="answer" type="text" autocomplete="off" placeholder="введи перевод" />
-            <button type="submit">Проверить</button>
-          </form>
-
-          <p class="result-line" id="resultLine" aria-live="polite"></p>
-
-          <div class="action-row">
-            <button class="secondary danger" id="againButton" type="button">Еще раз</button>
-            <button class="secondary" id="flipButton" type="button">Открыть</button>
-            <button class="primary" id="knownButton" type="button">Знаю</button>
-            <button class="icon-button" id="speakButton" type="button" aria-label="Произнести слово">
-              ◉
-            </button>
+            <div class="progress-track" aria-hidden="true"><div id="progressFill"></div></div>
           </div>
 
-          <div class="quiz-row" id="quizRow" aria-label="Быстрый выбор перевода"></div>
+          <div class="practice-grid">
+            <section class="trainer-column" aria-labelledby="currentWord">
+              <article class="flashcard" id="flashcard" tabindex="0" aria-live="polite">
+                <div class="card-inner">
+                  <section class="card-face card-front">
+                    <div class="card-topline">
+                      <div class="card-meta">
+                        <span id="cardCategory">быт</span>
+                        <span id="cardLevel">A1</span>
+                      </div>
+                      <div class="card-tools">
+                        <button class="card-icon" id="favoriteButton" type="button" aria-label="Добавить в избранное" title="Избранное">
+                          <span aria-hidden="true">☆</span>
+                        </button>
+                        <button class="card-icon" id="speakButton" type="button" aria-label="Произнести слово" title="Произнести">
+                          <span aria-hidden="true">♪</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-copy">
+                      <p class="prompt-label" id="promptLabel">Переведи на русский</p>
+                      <h2 id="currentWord">make sense</h2>
+                      <p id="cardExample">Your plan makes sense.</p>
+                    </div>
+                    <div class="mastery-line">
+                      <span id="masteryLabel">новое слово</span>
+                      <div aria-hidden="true"><i id="masteryFill"></i></div>
+                    </div>
+                  </section>
+
+                  <section class="card-face card-back">
+                    <div class="card-topline">
+                      <div class="card-meta">
+                        <span>ответ</span>
+                        <span id="answerCount">1 вариант</span>
+                      </div>
+                    </div>
+                    <div class="card-copy">
+                      <p class="prompt-label" id="answerLabel">Перевод</p>
+                      <h2 id="cardTranslation">иметь смысл</h2>
+                      <p id="cardExampleTranslation">Твой план имеет смысл.</p>
+                    </div>
+                    <div class="answer-variants" id="answerVariants"></div>
+                  </section>
+                </div>
+              </article>
+
+              <form class="answer-line" id="answerForm">
+                <label class="visually-hidden" for="answerInput">Введите ответ</label>
+                <input id="answerInput" name="answer" type="text" autocomplete="off" placeholder="введите перевод" />
+                <button class="primary-button" type="submit">Проверить</button>
+              </form>
+
+              <p class="result-line" id="resultLine" aria-live="polite"></p>
+
+              <div class="rating-row" aria-label="Оценка карточки">
+                <button class="rating-button again" id="againButton" type="button">
+                  <span>Еще раз</span><small>сейчас</small>
+                </button>
+                <button class="rating-button hard" id="hardButton" type="button">
+                  <span>Трудно</span><small>завтра</small>
+                </button>
+                <button class="rating-button known" id="knownButton" type="button">
+                  <span>Знаю</span><small id="knownInterval">через 1 день</small>
+                </button>
+                <button class="flip-button" id="flipButton" type="button">Показать ответ</button>
+              </div>
+
+              <div class="quiz-row" id="quizRow" aria-label="Варианты ответа"></div>
+            </section>
+
+            <aside class="study-rail">
+              <section class="goal-panel" aria-labelledby="goalTitle">
+                <div class="panel-heading">
+                  <div>
+                    <p class="eyebrow">Daily target</p>
+                    <h2 id="goalTitle">Дневная цель</h2>
+                  </div>
+                  <label class="goal-select">
+                    <span class="visually-hidden">Карточек в день</span>
+                    <select id="goalSelect" aria-label="Карточек в день">
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="50">50</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="goal-body">
+                  <div class="goal-ring" id="goalRing"><strong id="goalPercent">0%</strong></div>
+                  <div>
+                    <strong id="goalCopy">0 из 20</strong>
+                    <span id="goalMessage">Начните с первой карточки</span>
+                  </div>
+                </div>
+                <div class="week-chart" id="weekChart" aria-label="Активность за семь дней"></div>
+              </section>
+
+              <section class="queue-panel" aria-labelledby="queueTitle">
+                <div class="panel-heading">
+                  <div>
+                    <p class="eyebrow">Next up</p>
+                    <h2 id="queueTitle">Очередь</h2>
+                  </div>
+                  <span class="queue-count" id="queueCount">0</span>
+                </div>
+                <div class="queue-list" id="queueList"></div>
+              </section>
+
+              <figure class="study-visual">
+                <img src="./assets/study-cards.png" alt="Английские карточки на учебном столе" />
+                <figcaption>
+                  <span id="favoriteStat">0</span>
+                  <small>слов в избранном</small>
+                </figcaption>
+              </figure>
+            </aside>
+          </div>
         </section>
-      </section>
 
-      <section class="lower-grid">
-        <section class="queue-panel" aria-labelledby="queueTitle">
-          <div class="section-heading">
-            <p class="eyebrow">Queue</p>
-            <h2 id="queueTitle">Очередь</h2>
+        <section class="app-view" id="libraryView" data-view-panel="library" hidden>
+          <div class="page-heading library-heading">
+            <div>
+              <p class="eyebrow">Вся база</p>
+              <h1>Личный словарь</h1>
+            </div>
+            <p>Ищите слова, собирайте избранное и следите за освоением каждой карточки.</p>
           </div>
-          <div class="queue-list" id="queueList"></div>
-        </section>
 
-        <section class="builder-panel" aria-labelledby="builderTitle">
-          <div class="section-heading">
-            <p class="eyebrow">Custom</p>
-            <h2 id="builderTitle">Своя карточка</h2>
-          </div>
-          <form class="builder-form" id="customCardForm">
-            <label>
-              <span>English</span>
-              <input name="word" type="text" autocomplete="off" required />
-            </label>
-            <label>
-              <span>Перевод</span>
-              <input name="translation" type="text" autocomplete="off" required />
-            </label>
-            <label>
-              <span>Пример</span>
-              <input name="example" type="text" autocomplete="off" />
+          <section class="library-toolbar" aria-label="Фильтры словаря">
+            <label class="search-field">
+              <span>Поиск</span>
+              <input id="librarySearch" type="search" autocomplete="off" placeholder="слово, перевод или пример" />
             </label>
             <label>
               <span>Тема</span>
-              <input name="category" type="text" value="custom" autocomplete="off" />
+              <select id="libraryCategory"></select>
             </label>
-            <label>
-              <span>Уровень</span>
-              <select name="level">
-                <option>A1</option>
-                <option>A2</option>
-                <option>B1</option>
-                <option>B2</option>
-              </select>
+            <label class="check-control">
+              <input id="favoritesOnly" type="checkbox" />
+              <span>Только избранное</span>
             </label>
-            <button type="submit">Добавить</button>
-          </form>
-        </section>
-      </section>
-    </main>
+            <div class="library-actions">
+              <button class="secondary-button" id="exportButton" type="button">Экспорт</button>
+              <button class="secondary-button" id="importButton" type="button">Импорт</button>
+              <input class="visually-hidden" id="importInput" type="file" accept="application/json" />
+            </div>
+          </section>
 
+          <section class="library-summary" aria-label="Статистика словаря">
+            <div><strong id="newWordsStat">0</strong><span>новых</span></div>
+            <div><strong id="learningWordsStat">0</strong><span>изучаются</span></div>
+            <div><strong id="masteredWordsStat">0</strong><span>освоено</span></div>
+            <div><strong id="dueWordsStat">0</strong><span>на сегодня</span></div>
+          </section>
+
+          <div class="library-layout">
+            <section>
+              <div class="collection-heading">
+                <h2>Карточки</h2>
+                <span id="libraryResultCount">0 слов</span>
+              </div>
+              <div class="word-grid" id="wordGrid"></div>
+              <button class="load-more" id="loadMoreButton" type="button">Показать еще</button>
+            </section>
+
+            <aside class="custom-panel" aria-labelledby="builderTitle">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Custom deck</p>
+                  <h2 id="builderTitle">Своя карточка</h2>
+                </div>
+              </div>
+              <form class="builder-form" id="customCardForm">
+                <label>
+                  <span>English</span>
+                  <input name="word" type="text" autocomplete="off" required />
+                </label>
+                <label>
+                  <span>Перевод</span>
+                  <input name="translation" type="text" autocomplete="off" required />
+                </label>
+                <label>
+                  <span>Пример</span>
+                  <textarea name="example" rows="2"></textarea>
+                </label>
+                <label>
+                  <span>Перевод примера</span>
+                  <textarea name="exampleTranslation" rows="2"></textarea>
+                </label>
+                <label>
+                  <span>Другие ответы</span>
+                  <input name="answers" type="text" placeholder="через запятую" autocomplete="off" />
+                </label>
+                <div class="builder-split">
+                  <label>
+                    <span>Тема</span>
+                    <input name="category" type="text" value="custom" autocomplete="off" />
+                  </label>
+                  <label>
+                    <span>Уровень</span>
+                    <select name="level">
+                      <option>A1</option><option>A2</option><option>B1</option><option>B2</option>
+                    </select>
+                  </label>
+                </div>
+                <button class="primary-button" type="submit">Добавить в словарь</button>
+              </form>
+            </aside>
+          </div>
+        </section>
+
+        <section class="app-view" id="guideView" data-view-panel="guide" hidden>
+          <section class="guide-banner">
+            <img src="./assets/study-cards.png" alt="Карточки и записи для изучения английского" />
+            <div>
+              <p class="eyebrow">English essentials</p>
+              <h1>Короткий гид без воды</h1>
+              <p>Базовые конструкции, которые сразу делают речь точнее и естественнее.</p>
+            </div>
+          </section>
+
+          <div class="guide-stats">
+            <div><strong>8</strong><span>мини-уроков</span></div>
+            <div><strong>24</strong><span>живых примера</span></div>
+            <div><strong>A1–B2</strong><span>уровни</span></div>
+          </div>
+
+          <section class="lesson-grid" id="lessonGrid" aria-label="Учебные материалы"></section>
+        </section>
+      </main>
+
+      <footer>
+        <span>LexiCards</span>
+        <span id="footerDeckCount">0 карточек · прогресс хранится на этом устройстве</span>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script type="module" src="./app.mjs"></script>
   </body>
 </html>
