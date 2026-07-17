@@ -1,27 +1,29 @@
 # LexiCards English Trainer
 
-Interactive English flashcard trainer for Russian speakers.
+Интерактивный тренажер английского языка для русскоязычных учеников. Работает как статическое приложение без сборки и сохраняет учебный прогресс в браузере.
 
-## Features
+## Возможности
 
-- 172 built-in cards across 18 categories.
-- Sprint, full, and hard practice modes.
-- Flip cards, typed translation checks, quick quiz choices, and speech playback.
-- Repeat queue for missed cards.
-- Custom cards saved locally in the browser.
-- Static HTML/CSS/JavaScript app with no build step.
+- 252 встроенные карточки по 25 темам и уровням A1-B2.
+- Умная сессия, спринт, работа над ошибками, избранное, полная колода и режим без подсказок.
+- Направления EN → RU, RU → EN и аудирование с озвучкой.
+- Интервальное повторение с оценками «Еще раз», «Трудно» и «Знаю».
+- Дневная цель, недельная активность, точность и уровень освоения каждого слова.
+- Поиск по словарю, избранное, пользовательские карточки и импорт/экспорт данных.
+- 8 мини-уроков с 24 примерами по грамматике и живой речи.
+- Светлая и темная темы, адаптивная версия для мобильных устройств.
 
-## Local Run
+## Локальный запуск
 
-Open `index.html` directly, or serve the folder:
+Откройте `index.html` напрямую или запустите статический сервер:
 
 ```bash
 python -m http.server 8787
 ```
 
-Then visit `http://127.0.0.1:8787`.
+Затем откройте `http://127.0.0.1:8787`.
 
-## Checks
+## Проверки
 
 ```bash
 npm test

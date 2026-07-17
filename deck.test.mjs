@@ -59,9 +59,11 @@ test("createSession filters by category and exposes progress", async () => {
 test("defaultCards has enough material for a real session", async () => {
   const { defaultCards, categoriesFor, levelsFor } = await loadDeckModule();
 
-  assert.ok(defaultCards.length >= 160, `expected at least 160 cards, got ${defaultCards.length}`);
-  assert.ok(categoriesFor(defaultCards).length >= 14);
+  assert.ok(defaultCards.length >= 250, `expected at least 250 cards, got ${defaultCards.length}`);
+  assert.ok(categoriesFor(defaultCards).length >= 24);
   assert.deepEqual(levelsFor(defaultCards), ["all", "A2", "B1", "A1", "B2"]);
+  assert.equal(new Set(defaultCards.map((card) => card.id)).size, defaultCards.length);
+  assert.ok(defaultCards.every((card) => card.word && card.translation && card.example));
 });
 
 test("createSession can shuffle and limit a practice sprint", async () => {
@@ -85,6 +87,18 @@ test("rateCurrentCard can add extra repeats for tough mode", async () => {
   assert.deepEqual(afterAgain.order, ["arrive", "gate", "arrive", "arrive"]);
   assert.deepEqual(afterAgain.reviewIds, ["arrive"]);
   assert.equal(afterAgain.repeatMisses, 2);
+});
+
+test("rateCurrentCard treats hard as one scheduled repeat", async () => {
+  const { createSession, rateCurrentCard } = await loadDeckModule();
+  const session = createSession(sampleCards, { repeatMisses: 2 });
+
+  const afterHard = rateCurrentCard(session, "hard");
+
+  assert.deepEqual(afterHard.order, ["arrive", "gate", "tiny", "arrive"]);
+  assert.deepEqual(afterHard.reviewIds, ["arrive"]);
+  assert.equal(afterHard.answered, 1);
+  assert.equal(afterHard.streak, 0);
 });
 
 test("rateCurrentCard repeats missed cards without mutating the old session", async () => {
@@ -130,6 +144,7 @@ test("addCustomCard normalizes user cards and keeps existing cards immutable", a
     word: " Keep up ",
     translation: "продолжать",
     example: "Keep up the good work.",
+    exampleTranslation: "Продолжай в том же духе.",
     category: "phrases",
     level: "A2",
   });
@@ -142,6 +157,7 @@ test("addCustomCard normalizes user cards and keeps existing cards immutable", a
     translation: "продолжать",
     answers: ["продолжать"],
     example: "Keep up the good work.",
+    exampleTranslation: "Продолжай в том же духе.",
     category: "phrases",
     level: "A2",
   });
