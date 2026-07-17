@@ -329,12 +329,64 @@
           </section>
 
           <div class="guide-stats">
-            <div><strong>8</strong><span>мини-уроков</span></div>
-            <div><strong>24</strong><span>живых примера</span></div>
-            <div><strong>A1–B2</strong><span>уровни</span></div>
+            <div><strong id="lessonCountStat">16</strong><span>мини-уроков</span></div>
+            <div><strong id="exampleCountStat">48</strong><span>живых примеров</span></div>
+            <div><strong id="quizBestStat">0/10</strong><span>лучший тест</span></div>
+            <div><strong id="dayStreakStat">0</strong><span>дней подряд</span></div>
           </div>
 
-          <section class="lesson-grid" id="lessonGrid" aria-label="Учебные материалы"></section>
+          <div class="guide-tools">
+            <section class="word-day-panel" aria-labelledby="wordDayTitle">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Daily word</p>
+                  <h2 id="wordDayTitle">Слово дня</h2>
+                </div>
+                <span class="word-day-level" id="wordDayLevel">A1</span>
+              </div>
+              <div class="word-day-copy">
+                <h3 id="wordDayWord">discover</h3>
+                <strong id="wordDayTranslation">обнаружить</strong>
+                <p id="wordDayExample">You can discover something new every day.</p>
+                <span id="wordDayExampleTranslation">Каждый день можно открывать что-то новое.</span>
+              </div>
+              <div class="word-day-actions">
+                <button class="icon-button" id="wordDaySpeakButton" type="button" aria-label="Произнести слово дня" title="Произнести">
+                  <span aria-hidden="true">♪</span>
+                </button>
+                <button class="secondary-button" id="wordDayFavoriteButton" type="button">В избранное</button>
+                <button class="primary-button" id="wordDayPracticeButton" type="button">Учить тему</button>
+              </div>
+            </section>
+
+            <section class="quiz-panel" aria-labelledby="quizTitle">
+              <div class="panel-heading quiz-heading">
+                <div>
+                  <p class="eyebrow">Quick check</p>
+                  <h2 id="quizTitle">Мини-тест</h2>
+                </div>
+                <span id="quizProgress">1 / 10</span>
+              </div>
+              <div class="quiz-progress-track" aria-hidden="true"><i id="quizProgressFill"></i></div>
+              <div id="quizBody"></div>
+            </section>
+          </div>
+
+          <section class="lessons-section" aria-labelledby="lessonsTitle">
+            <div class="lesson-toolbar">
+              <div>
+                <p class="eyebrow">Knowledge base</p>
+                <h2 id="lessonsTitle">Мини-уроки</h2>
+              </div>
+              <div class="lesson-filters" aria-label="Фильтр мини-уроков">
+                <button class="is-active" type="button" data-lesson-topic="all" aria-pressed="true">Все</button>
+                <button type="button" data-lesson-topic="grammar" aria-pressed="false">Грамматика</button>
+                <button type="button" data-lesson-topic="vocabulary" aria-pressed="false">Слова</button>
+                <button type="button" data-lesson-topic="speaking" aria-pressed="false">Речь</button>
+              </div>
+            </div>
+            <section class="lesson-grid" id="lessonGrid" aria-label="Учебные материалы"></section>
+          </section>
         </section>
       </main>
 

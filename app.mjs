@@ -108,6 +108,7 @@ const modeProfiles = {
 const lessons = [
   {
     title: "A, an или the",
+    topic: "grammar",
     level: "A1-A2",
     text: "A/an вводит предмет впервые. The указывает на конкретный предмет, уже понятный собеседнику.",
     examples: [
@@ -118,6 +119,7 @@ const lessons = [
   },
   {
     title: "Present Simple vs Continuous",
+    topic: "grammar",
     level: "A1-A2",
     text: "Simple описывает привычку или факт. Continuous показывает действие, которое идет прямо сейчас или временно.",
     examples: [
@@ -128,6 +130,7 @@ const lessons = [
   },
   {
     title: "Present Perfect",
+    topic: "grammar",
     level: "A2-B1",
     text: "Используйте have/has + третью форму, когда важен результат к настоящему моменту, а точное время не названо.",
     examples: [
@@ -138,6 +141,7 @@ const lessons = [
   },
   {
     title: "In, on и at",
+    topic: "grammar",
     level: "A1-B1",
     text: "At - точка, on - поверхность или день, in - пространство или большой период. Это работает и для места, и для времени.",
     examples: [
@@ -148,6 +152,7 @@ const lessons = [
   },
   {
     title: "Модальные глаголы",
+    topic: "grammar",
     level: "A2-B1",
     text: "После can, should, must и might ставится базовая форма глагола без to. Модальный глагол задает оттенок смысла.",
     examples: [
@@ -158,6 +163,7 @@ const lessons = [
   },
   {
     title: "Порядок слов",
+    topic: "grammar",
     level: "A1-B1",
     text: "В утверждении обычно идет подлежащее, затем действие и дополнение. В вопросе вспомогательный глагол выходит вперед.",
     examples: [
@@ -168,6 +174,7 @@ const lessons = [
   },
   {
     title: "Phrasal verbs",
+    topic: "vocabulary",
     level: "A2-B2",
     text: "Глагол с частицей часто получает новый смысл. Учите всю конструкцию целиком и сразу в короткой фразе.",
     examples: [
@@ -178,6 +185,7 @@ const lessons = [
   },
   {
     title: "Живая связная речь",
+    topic: "speaking",
     level: "B1-B2",
     text: "Служебные слова часто сокращаются, а согласные связываются с гласными. Слушайте всю фразу, а не отдельные слова.",
     examples: [
@@ -185,6 +193,157 @@ const lessons = [
       ["I want to go.", "Want to часто звучит близко к wanna."],
       ["Pick it up.", "Слова связываются: pick-it-up."],
     ],
+  },
+  {
+    title: "Past Simple vs Present Perfect",
+    topic: "grammar",
+    level: "A2-B1",
+    text: "Past Simple привязан к законченному моменту в прошлом. Present Perfect связывает прошлое с настоящим и не называет точное время.",
+    examples: [
+      ["I visited Rome in 2024.", "Я посетил Рим в 2024 году."],
+      ["I have visited Rome twice.", "Я дважды бывал в Риме."],
+      ["She has just arrived.", "Она только что приехала."],
+    ],
+  },
+  {
+    title: "Will, going to и планы",
+    topic: "grammar",
+    level: "A2-B1",
+    text: "Will подходит для решения в момент речи и прогноза. Going to показывает намерение, а Present Continuous - уже согласованный план.",
+    examples: [
+      ["I will answer the phone.", "Я отвечу на звонок."],
+      ["We are going to move.", "Мы собираемся переехать."],
+      ["I am meeting Anna at six.", "Я встречаюсь с Анной в шесть."],
+    ],
+  },
+  {
+    title: "Условные предложения",
+    topic: "grammar",
+    level: "B1-B2",
+    text: "First Conditional говорит о реальном будущем. Second Conditional описывает воображаемую или маловероятную ситуацию.",
+    examples: [
+      ["If it rains, we will stay home.", "Если пойдет дождь, мы останемся дома."],
+      ["If I had more time, I would travel.", "Если бы у меня было больше времени, я бы путешествовал."],
+      ["If you heat ice, it melts.", "Если нагреть лед, он тает."],
+    ],
+  },
+  {
+    title: "Much, many, few и little",
+    topic: "grammar",
+    level: "A2-B1",
+    text: "Many и few идут с исчисляемыми существительными. Much и little - с неисчисляемыми. A few и a little означают небольшое, но достаточное количество.",
+    examples: [
+      ["We have a few questions.", "У нас есть несколько вопросов."],
+      ["There is little time left.", "Осталось мало времени."],
+      ["How much water do you need?", "Сколько воды тебе нужно?"],
+    ],
+  },
+  {
+    title: "Gerund или infinitive",
+    topic: "grammar",
+    level: "B1-B2",
+    text: "После enjoy, avoid и finish обычно ставится форма -ing. После want, decide и plan используется to + глагол.",
+    examples: [
+      ["I enjoy learning languages.", "Мне нравится изучать языки."],
+      ["She decided to leave early.", "Она решила уйти пораньше."],
+      ["We finished preparing dinner.", "Мы закончили готовить ужин."],
+    ],
+  },
+  {
+    title: "Сравнения без ошибок",
+    topic: "grammar",
+    level: "A2-B1",
+    text: "Короткие прилагательные получают -er/-est. С длинными используются more/most. Не забывайте неправильные формы good и bad.",
+    examples: [
+      ["This route is shorter.", "Этот маршрут короче."],
+      ["It is the most useful option.", "Это самый полезный вариант."],
+      ["Today is better than yesterday.", "Сегодня лучше, чем вчера."],
+    ],
+  },
+  {
+    title: "Ложные друзья переводчика",
+    topic: "vocabulary",
+    level: "B1-B2",
+    text: "Похожие на русские слова могут иметь другой смысл. Проверяйте такие пары в контексте, а не переводите по форме.",
+    examples: [
+      ["Actually means in fact.", "Actually означает «на самом деле», а не «актуально»."],
+      ["A magazine is a journal.", "Magazine - это журнал, а не магазин."],
+      ["Accurate means exact.", "Accurate означает точный, а не аккуратный."],
+    ],
+  },
+  {
+    title: "Вежливый английский",
+    topic: "speaking",
+    level: "A2-B2",
+    text: "Could, would и мягкие вводные фразы делают просьбы естественнее. Это особенно важно в работе, поездках и переписке.",
+    examples: [
+      ["Could you help me, please?", "Не могли бы вы мне помочь?"],
+      ["Would you mind closing the door?", "Вы не могли бы закрыть дверь?"],
+      ["I am afraid I cannot agree.", "Боюсь, я не могу согласиться."],
+    ],
+  },
+];
+
+const quizQuestions = [
+  {
+    prompt: "I ___ coffee every morning.",
+    options: ["drink", "drinks", "am drinking"],
+    answer: "drink",
+    explanation: "Регулярное действие требует Present Simple. С I используется базовая форма drink.",
+  },
+  {
+    prompt: "Look! It ___ outside.",
+    options: ["is raining", "rains", "rained"],
+    answer: "is raining",
+    explanation: "Look указывает на действие прямо сейчас, поэтому нужен Present Continuous.",
+  },
+  {
+    prompt: "I ___ this film already.",
+    options: ["have seen", "saw", "am seeing"],
+    answer: "have seen",
+    explanation: "Already и важный сейчас результат обычно требуют Present Perfect.",
+  },
+  {
+    prompt: "We ___ Paris last year.",
+    options: ["visited", "have visited", "visit"],
+    answer: "visited",
+    explanation: "Last year - законченное время в прошлом, поэтому используется Past Simple.",
+  },
+  {
+    prompt: "There isn't ___ milk left.",
+    options: ["much", "many", "a few"],
+    answer: "much",
+    explanation: "Milk - неисчисляемое существительное. В отрицании с ним используется much.",
+  },
+  {
+    prompt: "If it rains, we ___ at home.",
+    options: ["will stay", "stayed", "would stay"],
+    answer: "will stay",
+    explanation: "Реальное условие о будущем: if + Present Simple, затем will + глагол.",
+  },
+  {
+    prompt: "She is ___ than her brother.",
+    options: ["taller", "more tall", "tallest"],
+    answer: "taller",
+    explanation: "Короткое прилагательное tall образует сравнительную форму с окончанием -er.",
+  },
+  {
+    prompt: "I enjoy ___ English.",
+    options: ["learning", "to learn", "learn"],
+    answer: "learning",
+    explanation: "После enjoy используется герундий, то есть форма глагола с -ing.",
+  },
+  {
+    prompt: "Could you tell me where ___?",
+    options: ["the station is", "is the station", "the station"],
+    answer: "the station is",
+    explanation: "В косвенном вопросе сохраняется порядок слов утверждения: подлежащее перед глаголом.",
+  },
+  {
+    prompt: "I need ___ umbrella.",
+    options: ["an", "a", "the"],
+    answer: "an",
+    explanation: "Umbrella начинается с гласного звука, поэтому перед ним ставится an.",
   },
 ];
 
@@ -198,6 +357,9 @@ let cards = [...defaultCards, ...loadCustomCards()];
 let filters = { category: "all", level: "all", mode: "smart" };
 let libraryFilters = { search: "", category: "all", favoritesOnly: false };
 let libraryVisible = 24;
+let lessonTopic = "all";
+let quizRun = 0;
+let quizState = createQuizState();
 let direction = ["en-ru", "ru-en", "listen"].includes(preferences.direction)
   ? preferences.direction
   : "en-ru";
@@ -275,6 +437,22 @@ const elements = {
   wordGrid: document.querySelector("#wordGrid"),
   loadMoreButton: document.querySelector("#loadMoreButton"),
   customCardForm: document.querySelector("#customCardForm"),
+  lessonCountStat: document.querySelector("#lessonCountStat"),
+  exampleCountStat: document.querySelector("#exampleCountStat"),
+  quizBestStat: document.querySelector("#quizBestStat"),
+  dayStreakStat: document.querySelector("#dayStreakStat"),
+  wordDayLevel: document.querySelector("#wordDayLevel"),
+  wordDayWord: document.querySelector("#wordDayWord"),
+  wordDayTranslation: document.querySelector("#wordDayTranslation"),
+  wordDayExample: document.querySelector("#wordDayExample"),
+  wordDayExampleTranslation: document.querySelector("#wordDayExampleTranslation"),
+  wordDaySpeakButton: document.querySelector("#wordDaySpeakButton"),
+  wordDayFavoriteButton: document.querySelector("#wordDayFavoriteButton"),
+  wordDayPracticeButton: document.querySelector("#wordDayPracticeButton"),
+  quizProgress: document.querySelector("#quizProgress"),
+  quizProgressFill: document.querySelector("#quizProgressFill"),
+  quizBody: document.querySelector("#quizBody"),
+  lessonTopicButtons: [...document.querySelectorAll("[data-lesson-topic]")],
   lessonGrid: document.querySelector("#lessonGrid"),
   footerDeckCount: document.querySelector("#footerDeckCount"),
   toast: document.querySelector("#toast"),
@@ -285,7 +463,7 @@ initialize();
 function initialize() {
   applyTheme();
   renderFilterOptions();
-  renderLessons();
+  renderGuide();
   bindEvents();
   render();
 
@@ -389,6 +567,19 @@ function bindEvents() {
   elements.exportButton.addEventListener("click", exportData);
   elements.importButton.addEventListener("click", () => elements.importInput.click());
   elements.importInput.addEventListener("change", importData);
+  elements.lessonTopicButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      lessonTopic = button.dataset.lessonTopic;
+      renderLessons();
+    });
+  });
+  elements.wordDaySpeakButton.addEventListener("click", () => speakText(wordOfDay().word));
+  elements.wordDayFavoriteButton.addEventListener("click", () => {
+    toggleFavorite(wordOfDay().id);
+    renderWordOfDay();
+  });
+  elements.wordDayPracticeButton.addEventListener("click", startWordOfDayPractice);
+  elements.quizBody.addEventListener("click", handleGuideQuizClick);
 
   document.addEventListener("keydown", (event) => {
     const practiceActive = !document.querySelector("#practiceView").hidden;
@@ -424,6 +615,9 @@ function switchView(view, updateHash = true) {
 
   if (selected === "library") {
     renderLibrary();
+  }
+  if (selected === "guide") {
+    renderGuide();
   }
   if (updateHash) {
     history.replaceState(null, "", `#${selected}`);
@@ -590,6 +784,7 @@ function render() {
   renderDashboard();
   renderPractice();
   renderLibrarySummary();
+  renderGuideStats();
   elements.libraryCount.textContent = cards.length;
   elements.footerDeckCount.textContent = `${cards.length} карточек · прогресс хранится на этом устройстве`;
 }
@@ -838,12 +1033,19 @@ function answerPlaceholder() {
 
 function speakCurrentWord() {
   const card = currentCard(session);
-  if (!card || !("speechSynthesis" in window)) {
+  if (!card) {
+    return;
+  }
+  speakText(card.word);
+}
+
+function speakText(text) {
+  if (!("speechSynthesis" in window)) {
     showToast("Озвучка недоступна в этом браузере");
     return;
   }
 
-  const utterance = new SpeechSynthesisUtterance(card.word);
+  const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-US";
   utterance.rate = 0.88;
   window.speechSynthesis.cancel();
@@ -1072,13 +1274,171 @@ async function importData() {
   }
 }
 
+function renderGuide() {
+  renderGuideStats();
+  renderWordOfDay();
+  renderGuideQuiz();
+  renderLessons();
+}
+
+function renderGuideStats() {
+  const exampleCount = lessons.reduce((total, lesson) => total + lesson.examples.length, 0);
+  const best = Math.max(0, Math.min(quizQuestions.length, Number(preferences.quizBest) || 0));
+  elements.lessonCountStat.textContent = lessons.length;
+  elements.exampleCountStat.textContent = exampleCount;
+  elements.quizBestStat.textContent = `${best}/${quizQuestions.length}`;
+  elements.dayStreakStat.textContent = studyDayStreak();
+}
+
+function renderWordOfDay() {
+  const card = wordOfDay();
+  const favorite = Boolean(cardState(card.id).favorite);
+  elements.wordDayLevel.textContent = `${card.level} · ${labelCategory(card.category)}`;
+  elements.wordDayWord.textContent = card.word;
+  elements.wordDayTranslation.textContent = card.translation;
+  elements.wordDayExample.textContent = card.example;
+  elements.wordDayExampleTranslation.textContent = card.exampleTranslation || "";
+  elements.wordDayFavoriteButton.textContent = favorite ? "В избранном" : "В избранное";
+  elements.wordDayFavoriteButton.classList.toggle("is-favorite", favorite);
+}
+
+function wordOfDay() {
+  return cards[hashString(localDateKey()) % cards.length];
+}
+
+function startWordOfDayPractice() {
+  const card = wordOfDay();
+  filters = { category: card.category, level: "all", mode: "smart" };
+  direction = "en-ru";
+  preferences.direction = direction;
+  savePreferences();
+  renderFilterOptions();
+  resetSession();
+  switchView("practice");
+  showToast(`Тема «${labelCategory(card.category)}» готова к тренировке`);
+}
+
+function createQuizState() {
+  return {
+    questions: seededShuffle(quizQuestions, `${localDateKey()}:${quizRun}`),
+    index: 0,
+    score: 0,
+    selected: null,
+    answered: false,
+    finished: false,
+  };
+}
+
+function renderGuideQuiz() {
+  const total = quizState.questions.length;
+  const completed = quizState.finished ? total : quizState.index + (quizState.answered ? 1 : 0);
+  elements.quizProgress.textContent = quizState.finished ? `${quizState.score} / ${total}` : `${quizState.index + 1} / ${total}`;
+  elements.quizProgressFill.style.width = `${Math.round((completed / total) * 100)}%`;
+
+  if (quizState.finished) {
+    const percentage = Math.round((quizState.score / total) * 100);
+    const message = percentage >= 80
+      ? "Сильный результат. База уже уверенная."
+      : percentage >= 50
+        ? "Неплохо. Объяснения подскажут, что повторить."
+        : "Хорошая диагностика. Пройдите уроки и попробуйте еще раз.";
+    elements.quizBody.innerHTML = `
+      <div class="quiz-result">
+        <span>${percentage}%</span>
+        <h3>${quizState.score} из ${total}</h3>
+        <p>${escapeHtml(message)}</p>
+        <button class="primary-button" type="button" data-quiz-action="restart">Пройти еще раз</button>
+      </div>
+    `;
+    return;
+  }
+
+  const question = quizState.questions[quizState.index];
+  elements.quizBody.innerHTML = `
+    <div class="quiz-question">
+      <p>${escapeHtml(question.prompt)}</p>
+      <div class="guide-quiz-options">
+        ${question.options
+          .map((option) => {
+            const correct = quizState.answered && option === question.answer;
+            const wrong = quizState.answered && option === quizState.selected && option !== question.answer;
+            const className = correct ? "correct" : wrong ? "wrong" : "";
+            return `<button class="${className}" type="button" data-quiz-option="${escapeHtml(option)}" ${quizState.answered ? "disabled" : ""}>${escapeHtml(option)}</button>`;
+          })
+          .join("")}
+      </div>
+      ${quizState.answered ? `
+        <div class="quiz-explanation ${quizState.selected === question.answer ? "good" : "bad"}">
+          <strong>${quizState.selected === question.answer ? "Верно" : `Правильно: ${escapeHtml(question.answer)}`}</strong>
+          <p>${escapeHtml(question.explanation)}</p>
+        </div>
+        <button class="secondary-button quiz-next" type="button" data-quiz-action="next">
+          ${quizState.index === total - 1 ? "Показать результат" : "Следующий вопрос"}
+        </button>
+      ` : ""}
+    </div>
+  `;
+}
+
+function handleGuideQuizClick(event) {
+  const optionButton = event.target.closest("button[data-quiz-option]");
+  if (optionButton && !quizState.answered && !quizState.finished) {
+    const question = quizState.questions[quizState.index];
+    quizState.selected = optionButton.dataset.quizOption;
+    quizState.answered = true;
+    if (quizState.selected === question.answer) {
+      quizState.score += 1;
+    }
+    renderGuideQuiz();
+    return;
+  }
+
+  const actionButton = event.target.closest("button[data-quiz-action]");
+  if (!actionButton) {
+    return;
+  }
+
+  if (actionButton.dataset.quizAction === "restart") {
+    quizRun += 1;
+    quizState = createQuizState();
+    renderGuideQuiz();
+    return;
+  }
+
+  if (actionButton.dataset.quizAction === "next" && quizState.answered) {
+    if (quizState.index === quizState.questions.length - 1) {
+      quizState.finished = true;
+      preferences.quizBest = Math.max(Number(preferences.quizBest) || 0, quizState.score);
+      savePreferences();
+      renderGuideStats();
+    } else {
+      quizState.index += 1;
+      quizState.selected = null;
+      quizState.answered = false;
+    }
+    renderGuideQuiz();
+  }
+}
+
 function renderLessons() {
-  elements.lessonGrid.innerHTML = lessons
-    .map((lesson, index) => `
+  elements.lessonTopicButtons.forEach((button) => {
+    const active = button.dataset.lessonTopic === lessonTopic;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  const visibleLessons = lessons
+    .map((lesson, index) => ({ lesson, index }))
+    .filter(({ lesson }) => lessonTopic === "all" || lesson.topic === lessonTopic);
+
+  elements.lessonGrid.innerHTML = visibleLessons
+    .map(({ lesson, index }) => `
       <article class="lesson-card">
         <div class="lesson-top">
           <span class="lesson-number">${String(index + 1).padStart(2, "0")}</span>
-          <span class="lesson-level">${escapeHtml(lesson.level)}</span>
+          <div class="lesson-tags">
+            <span>${escapeHtml(topicLabel(lesson.topic))}</span>
+            <span class="lesson-level">${escapeHtml(lesson.level)}</span>
+          </div>
         </div>
         <h2>${escapeHtml(lesson.title)}</h2>
         <p>${escapeHtml(lesson.text)}</p>
@@ -1092,6 +1452,23 @@ function renderLessons() {
       </article>
     `)
     .join("");
+}
+
+function topicLabel(topic) {
+  return { grammar: "грамматика", vocabulary: "слова", speaking: "речь" }[topic] ?? topic;
+}
+
+function studyDayStreak() {
+  const date = new Date();
+  if (!(activity[localDateKey(date)]?.answered > 0)) {
+    date.setDate(date.getDate() - 1);
+  }
+  let streak = 0;
+  while (activity[localDateKey(date)]?.answered > 0) {
+    streak += 1;
+    date.setDate(date.getDate() - 1);
+  }
+  return streak;
 }
 
 function cardState(cardId) {

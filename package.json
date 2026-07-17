@@ -1,7 +1,7 @@
 {
   "name": "lexicards-english-trainer",
-  "version": "2.0.0",
-  "description": "English trainer with 250+ flashcards, spaced repetition, personal progress, a searchable library, and mini-lessons.",
+  "version": "2.1.0",
+  "description": "English trainer with 250+ flashcards, spaced repetition, personal progress, mini-lessons, and grammar quizzes.",
   "type": "module",
   "scripts": {
     "check": "node --check app.mjs && node --check deck.mjs",
